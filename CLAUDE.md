@@ -44,14 +44,18 @@ This is a modern TypeScript Node.js starter template with the following stack:
 - `lefthook.yml` - Git hooks configuration
 - `vitest.config.ts` - Test configuration
 
+## Getting Started
+
+1. Clone this template repository
+2. Run the template script: `./template.sh GITHUB_OWNER GITHUB_REPO`
+3. Install dependencies: `bun install`
+
 ## Development Workflow
 
-1. Install dependencies: `bun install`
-2. Start development: `bun run start`
-3. Run tests: `bun run test`
-4. Check code quality: `bun run check`
-5. Fix issues: `bun run fix`
-6. Build for production: `bun run build`
+1. Run tests: `bun run test`
+2. Check code quality: `bun run check`
+3. Fix issues: `bun run fix`
+4. Build for production: `bun run build`
 
 ## CI/CD
 
@@ -65,11 +69,21 @@ The project uses GitHub Actions with:
 - Documentation generation
 - Automatic semantic releases on main branch
 
+## Template Setup
+
+This is a template repository. After cloning:
+
+1. **Run the template script**: `./template.sh GITHUB_OWNER GITHUB_REPO`
+   - Example: `./template.sh myusername myproject`
+   - This replaces template variables in package.json with your actual values
+
+2. **Install dependencies**: `bun install`
+
 ## Important Notes
 
-- Uses template variables `$GITHUB_OWNER` and `$GITHUB_REPO` in package.json
 - Configured for ESM modules (`"type": "module"`)
 - TypeScript is configured with strict settings and `noEmit: true`
 - Build uses tsup with automatic cleaning via `clean: true` option
 - Clean script uses native `rm -rf` instead of rimraf
 - All quality checks run in CI and must pass before merge
+- Dual module support with proper exports for CJS/ESM compatibility

@@ -2,7 +2,7 @@
   "bugs": {
     "url": "https://github.com/$GITHUB_OWNER/$GITHUB_REPO/issues"
   },
-  "description": "$TEMPLATE_DESCRIPTION",
+  "description": "...",
   "devDependencies": {
     "@evilmartians/lefthook": "^1.9.0",
     "@semantic-release/changelog": "^6.0.3",
@@ -30,8 +30,7 @@
     "vitest": "^2.0.5"
   },
   "files": [
-    "dist",
-    "!dist/**/*.test.*"
+    "dist"
   ],
   "homepage": "https://www.npmjs.com/package/@$GITHUB_OWNER/$GITHUB_REPO",
   "keywords": [],
@@ -64,7 +63,6 @@
     "fix:format": "prettier --write .",
     "fix:lint": "eslint . --fix",
     "release": "semantic-release",
-    "start": "tsx ./src/start.ts",
     "test": "bun run test:type && bun run test:unit",
     "test:type": "tsc",
     "test:unit": "vitest run --passWithNoTests"
