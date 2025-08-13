@@ -47,6 +47,12 @@ jobs:
     runs-on: ubuntu-latest
     # disable release, unless explicitly enabled
     if: false && github.ref == 'refs/heads/main' && github.event_name == 'push'
+    permissions:
+      contents: write
+      id-token: write
+      issues: write
+      pull-requests: write
+      pages: write
     steps:
       - uses: actions/checkout@v4
         with:
