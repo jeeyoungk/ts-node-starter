@@ -1,0 +1,6 @@
+
+[tools]
+bun = "latest"
+
+[env]
+_.path = ["{{ config_root }}/node_modules/.bin"]
